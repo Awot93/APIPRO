@@ -1,0 +1,15 @@
+<ul>
+    {% for object in object_list %}
+        <li>{{ object.target_url}}</li>
+        <li>{{object.description}}</li>
+        <li>{{object.identifier}}</li>
+        <li>{{object.author}}</li>
+        <li>{{object.created_date}}</li>
+        <li>{{object.active}}</li>
+
+        <hr>
+
+        {% empty%}
+        <li>No objects yet</li>
+    {% endfor %}
+</ul>

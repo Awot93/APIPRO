@@ -25,3 +25,7 @@ class PostUpdateApi(viewsets.ModelViewSet):
 class PostDeleteApi(viewsets.ModelViewSet):
     queryset = Link.objects.filter(active=True)
     serializer_class = LinkSerializer
+    
+class LinkViewSet(viewsets.ModelViewSet):
+    queryset = Link.objects.all()
+    serializer_class = LinkSerializer

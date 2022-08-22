@@ -10,3 +10,8 @@ class Link(models.Model):
     created_date = models.DateTimeField()
     active = models.BooleanField(default=True)
 
+    #renames the instances of the model with their title name
+    def __str__(self):
+        return self.title
+
+
